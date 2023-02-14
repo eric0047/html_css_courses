@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <!-- th是儲存格的標題格，當表格沒有標題的時候就不用th了 -->
+    <!-- colspan屬性為合併欄 -->
+
+    <table width="500" border="3">
+        <caption>成績單</caption>
+        <thead>
+            <tr>
+                <th>姓名</th> 
+                <th>國文</th>
+                <th>英文</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>曉明</th>
+                <td>100</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <th rowspan="2">曉滑</th>
+                <td>109</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <!-- <th>曉應</th> -->
+                <td>10</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>備註</th>
+                <td colspan="2">data</td>
+                <!-- <td>data</td> -->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
