@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .parent {
+            background-color: #fa0;
+            width: 960px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        } 
+        .child {
+            background-color: #aaf;
+            color: #fff;
+            width: 100px;
+            margin: 20px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child">child1</div>
+        <div class="child">child2</div>
+        <div class="child">child3</div>
+    </div>
+
+</body>
+</html>
