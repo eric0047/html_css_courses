@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div span {
+            background-color: #f00;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+
+        div > span {
+            background-color: #fa0;
+        }
+        /* 選取父層下面的第一個子層 */
+
+
+        div > span > span {
+            background-color: #00f;
+        }
+
+        div + p { 
+            color: #f00;
+        }
+
+        li + li {
+            border-top: 2px solid #000;
+        }
+        /* 選取div(同一階層)下面的全部p層，第一個之後的每一個 */
+
+        p.box span {
+            background-color: #ccc;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div><span>Lorem ipsum dolor<span>aaa
+            <span>ccc
+                <span>ddd</span>
+            </span>
+       vgsdhvghd </span> sit amet.</span>Lorem ipsum dolor sit, amet consectetur
+            
+        adipisicing elit. Ab unde voluptatum optio soluta placeat minus doloribus nostrum cum animi velit labore culpa, beatae repudiandae, sit iure nam eligendi obcaecati quasi?</div>
+
+    <p><div class="box">如有Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, amet.<span></span>傢伙先進轉讓依法類型感受那麼多你好，隨時別的浙江技巧害怕，得知感動強調又是各個證件主管運輸師傅宜蘭一身爸爸破壞，斗內業主招標回覆往往人才屬性學院下去內地接到財務像是，終於也有出售第二妹妹，作品突破組合大力給我宣傳該公司許多你有促進不會接受，頻道快樂我。</p></div>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur tempore vel rerum facere laboriosam odit, assumenda necessitatibus voluptate laborum tenetur veniam unde natus numquam animi aliquam corrupti nostrum obcaecati facilis!</p>
+    <p>Inventore enim consequuntur quae fuga cumque eos est! Sint cumque porro autem? Ducimus dicta fugit eligendi! Sunt eos laborum sapiente distinctio? Tempora unde iste accusantium accusamus nisi sint nesciunt ducimus.</p>
+    <p>Perferendis numquam fugiat repellat hic. Suscipit necessitatibus libero quae tenetur impedit. Minus iusto, animi reprehenderit sunt est suscipit voluptate aut doloremque, cum cumque rerum accusamus ullam, nemo quidem ipsum odit.</p>
+
+    <ul>
+        <li>
+            Lorem, ipsum dolor.
+        </li>
+        <li>
+            Lorem, ipsum dolor.
+        </li>
+        <li>
+            Lorem, ipsum dolor.
+        </li>
+        <li>
+            Lorem, ipsum dolor.
+        </li>
+    </ul>
+    </section>
+    
+</body>
+</html>

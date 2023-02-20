@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent div:first-child {
+            color: #00f;
+        }
+        /* 父層物件底下第一個子物件 */
+
+        .parent span:first-of-type {
+            color: #f00;
+        }
+        /* 父層物件底下第一個“某個”類型的物件 */
+
+        .parent p:last-of-type {
+            color: #0f0;
+        }
+
+        .parent .box:last-of-type {
+            color: #f0a;
+        }
+        /* 父層物件底下最後一個符合“box類別”，又是符合全部類型的，最後一項（後面無相同名稱）的物件 */
+
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="box">div</div>
+        <p>ppp</p>
+        <span>span</span>
+        <div>div</div>
+        <p>ppp</p>
+        
+        <div>div</div>
+        <span><div class="box">span</div></span>
+        <div class="box">ppp</div>
+        <!-- <span>span</span> -->
+    </div>
+
+</body>
+</html>
