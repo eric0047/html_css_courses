@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 800px;
+            height: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color:  #aaf;
+        }
+        .child  {
+            width: 160px;
+            height: 160px;
+            background-color: #f00;
+            font-size: 32px;
+            color: #fff;
+            margin: 5px;
+        }
+        .child:nth-child(2){
+            flex-grow: 1;
+            background-color: #fa0;
+        }
+        /* flex-grow將父層的剩餘空間分給子層x份，直到子層把父層的width塞滿 */
+
+        .child:nth-child(3){
+            flex-grow: 1;
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            1
+        </div>
+        <div class="child">
+            2
+        </div>
+        <div class="child">
+            3
+        </div>
+        <div class="child">
+            4
+        </div>
+        <div class="child">
+            5
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 600px;
+            height: 600px;
+            background-color: #ccf;
+
+            display: flex;
+            /* flex相關屬性 可用 “對象 空間 軸 的位置” 判斷作用的方式 */
+
+            /* 父層flex會讓子層物件皆可設定寬跟高（不管他是block inline inline-block） */
+            flex-direction:  row;
+            flex-wrap: wrap;
+            /* flex-wrap是在控制交叉軸方向＋換列（行）
+             */
+             /* 沒有flex-wrap的時候，彈性列會佔據整個父層空間 */
+
+            /* justify-content: center;
+            勁量不要用 */
+
+             align-content: center;
+             /* align-content是在控制彈性列（或欄，視主軸方向而定），在交叉軸的空間分佈，預設值是以最高子物件的高度為基準，剩餘空間會平均分佈於父層的全部 */
+
+             align-items: center;
+             /* align-items是在控制子物件，在彈性列的交叉軸的位置，作用的空間取決於彈性列的大小 */
+        }
+        .child {
+            width: 160px;
+            height: 160px;
+            margin: 5px;
+            background-color: #fa0;
+            font-size: 32px;
+        }
+        .child:first-child{
+            height: 200px;
+        }
+        .child:last-child {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child">
+            1
+        </div>
+        <div class="child">
+            2
+        </div>
+        <div class="child">
+            3
+        </div>
+        <div class="child">
+            4
+        </div>
+        <div class="child">
+            5
+        </div>
+    </div>
+
+</body>
+</html>

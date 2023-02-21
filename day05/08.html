@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .parent {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            background-color:  #aaf;
+            font-size: 50px;
+        }
+        .child  {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            margin: 5px;
+        }
+
+        .child:nth-child(1){
+            flex-basis: 300px;
+        }
+        /* flex-basisu延長子層的主軸長度（連同父層），即使父層有設定寬高一樣會蓋掉，易混亂不建議使用！！ */
+
+        /* flex子層屬性的值可寫成一排
+        flex: grow shrink basis */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            1
+        </div>
+        <div class="child">
+            2
+        </div>
+        <div class="child">
+            3
+        </div>
+        <!-- <div class="child">
+            4
+        </div>
+        <div class="child">
+            5
+        </div> -->
+    </div>
+</body>
+</html>

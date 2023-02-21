@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-color: #aaf;
+            display: flex;
+            width: 100%;
+            height: 300px;
+            flex-shrink: 0;
+        }
+
+        .folder {
+            width: 200px;
+            background-color: #f00;
+            flex-shrink: 0;
+        }
+        .mail-list {
+            width: 100%;
+            flex-shrink: 1;
+            /* width: 0;
+            flex-grow: 1; */
+            background-color: aqua;
+            margin: 0 20px;
+        }
+        .contact {
+            width: 200px;
+            background-color: #fa0;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="folder">1</div>
+        <div class="mail-list">2</div>
+        <div class="contact">3</div>
+    </div>
+</body>
+</html>
