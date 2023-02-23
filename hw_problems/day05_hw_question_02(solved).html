@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+    /* 第＃411行的course類別下，card-footer無法調整與邊框之距離 */
+        body {
+            width: 1200px;
+            margin: auto;
+        }
+        section {
+            padding: 20px 0;
+            line-height: 1.5;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            /* position: fixed; */
+            border-bottom: 1px  solid #666;
+        }
+        .logo a {
+            display: flex;
+            padding: 5px;
+            align-items: center;
+        }
+        .header :last-child{
+            margin-left: auto;
+        }
+        img {
+            width: 100%;
+        }
+        .title {
+            width: 300px;
+            margin: auto;
+            padding: 10px 0 20px;
+        }
+        h2 {
+            font-size: 34px;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        li {
+            list-style: none;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        h2 span {
+            border-bottom: 2px solid #f00;
+        }
+        .title p {
+            padding: 20px;
+        }
+        .subject-content .card {
+            margin: 10px;
+            width: 380px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+        .teacher-content .card {
+            margin: 10px;
+            padding: 20px;
+            width: 580px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        .teacher-content .card-title {
+            display: flex;
+            line-height: 2.5;
+        }
+        .teacher-content .card-title div {
+            width: 30%;
+        }
+        .teacher-content .card-title img {
+            border-radius: 50%;
+        }
+        .teacher-content .card-title-content {
+            padding: 20px;
+        }
+        .teacher-content ul {
+            display: flex;
+            justify-content: flex-start;
+        }
+        .teacher-content li {
+            padding: 0 5px 0 0;
+        }
+        .news-title {
+            width: 100px;
+        }
+        .news-content div {
+            margin: 10px;
+            width: 580px;
+        }
+        .more-information {
+            font-size: 24px;
+            width: 100px;
+            border: 2px solid #f00;
+            margin: auto;
+        }
+        .more-information a {
+            padding: 10px;
+        }
+        .course-title {
+            display: flex;
+            width: 1200px;
+        }
+        .short-course , .course-title div {
+            margin: 10px;
+            width: 580px;
+        }
+        .course-content h3 {
+            width: 100px;
+            margin-right: auto;
+        }
+        .course-content .card {
+            margin: 10px;
+            width: 380px;
+            box-sizing: border-box;
+            border: 1px solid #f00;
+        }
+        .course-content .card div {
+            padding: 10px;
+            /* 改成padding 上下 左右 就可以了 */
+        }
+        .course-content div p {
+            display: inline-block;
+        }
+        .course-content .card-footer {
+            display: flex;
+            border-top: 1px solid #666;
+            justify-content: space-between;
+        }
+        .learning-path-title {
+            width: 1200px;
+            margin-right: auto;
+        }
+        .learning-path-content .card {
+            margin: 10px;
+            width: 578px;
+            border: 1px solid #f00;
+        }
+        .learning-path-content .card-title {
+            padding: 15px;
+        }
+        .learning-path-content .card-title h3 {
+            border-bottom: 1px solid #666;
+        }
+        .learning-path-content .card-title p {
+            padding: 20px 0;
+        }
+       .extend-article-title .title{
+            width: 100%;
+       }
+       .extend-article-content .card {
+            margin: 10px;
+            width: 380px;
+            border: 1px solid #f00;
+            box-sizing: border-box;
+       }
+       .footer-head {
+            display: flex;
+            flex-wrap: wrap;
+       }
+       .footer .footer-logo {
+            width: 400px;
+       }
+       .footer-logo img {
+            width: 50%;
+       }
+       .footer .footer-content {
+            width: 800px;
+       }
+       .footer-content .card {
+            margin: 10px;
+            width: 230px;
+            border: 1px solid #f00;
+            box-sizing: border-box;
+       }
+       .footer-foot ul{
+            display: flex;
+            justify-content: center;
+       }
+       .footer-foot li {
+            margin: 5px;
+       }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="header">
+            <div class="logo">
+                <a href="https://5xruby.tw/">
+                    <div><img src="https://picsum.photos/30/30/?random=10"></div>
+                    <h1>五倍紅寶石</h1>
+                </a>
+            </div>
+            <nav>
+                <a href="https://astro.5xruby.tw/" target="_blank">Astro Camp</a>
+                <a href="https://base.5xcampus.com/" target="_blank">線上課程</a>
+                <a href="https://5xruby.tw/courses">實體課程</a>
+                <a href="https://5xruby.tw/posts">技術文章</a>
+                <a href="https://5xruby.tw/news">五倍消息</a>
+            </nav>
+        </div>
+    </section>
+    <section>
+        <div class="banner">
+            <img src="https://picsum.photos/600/200/?random=10">
+        </div>
+    </section>
+    <section>
+        <article>
+            <section>
+                <div class="subject">
+                    <div class="title subject-title">
+                        <h2>ti<span>SUBJECT</span>tle</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, in?</p>
+                    </div>
+                    <div class="content subject-content">
+                        <div class="card">
+                            <img src="https://picsum.photos/300/200/?random=10">
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, molestias qui! Ipsa nisi neque a officiis minima earum maxime fugit.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/300/200/?random=10">
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, molestias qui! Ipsa nisi neque a officiis minima earum maxime fugit.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/300/200/?random=10">
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, molestias qui! Ipsa nisi neque a officiis minima earum maxime fugit.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="teacher">
+                    <div class="title teacher-title">
+                        <h2><span>TEACHER</span>title</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, at!</p>
+                    </div>
+                    <div class="content teacher-content">
+                        <div class="card">
+                            <div class="card-title">
+                                <div><img src="https://picsum.photos/200/200/?random=10"></div>
+                                <div class="card-title-content">
+                                    <h3><span>title</span>title</h3>
+                                    <p>Lorem.</p>
+                                    <ul>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia iusto mollitia culpa, consectetur laborum nostrum dolore eius, aliquid veniam facilis deleniti quaerat, iure ad natus architecto consequatur aperiam velit asperiores?</p>
+                            </div>
+                            <div class="card-footer">
+                                <p>Lorem, ipsum.</p>
+                                <ul>
+                                    <li><a href="#">link</a></li>
+                                    <li><a href="#">link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <div><img src="https://picsum.photos/200/200/?random=10"></div>
+                                <div class="card-title-content">
+                                    <h3><span>title</span>title</h3>
+                                    <p>Lorem.</p>
+                                    <ul>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia iusto mollitia culpa, consectetur laborum nostrum dolore eius, aliquid veniam facilis deleniti quaerat, iure ad natus architecto consequatur aperiam velit asperiores?</p>
+                            </div>
+                            <div class="card-footer">
+                                <p>Lorem, ipsum.</p>
+                                <ul>
+                                    <li><a href="#">link</a></li>
+                                    <li><a href="#">link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <div><img src="https://picsum.photos/200/200/?random=10"></div>
+                                <div class="card-title-content">
+                                    <h3><span>title</span>title</h3>
+                                    <p>Lorem.</p>
+                                    <ul>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia iusto mollitia culpa, consectetur laborum nostrum dolore eius, aliquid veniam facilis deleniti quaerat, iure ad natus architecto consequatur aperiam velit asperiores?</p>
+                            </div>
+                            <div class="card-footer">
+                                <p>Lorem, ipsum.</p>
+                                <ul>
+                                    <li><a href="#">link</a></li>
+                                    <li><a href="#">link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <div><img src="https://picsum.photos/200/200/?random=10"></div>
+                                <div class="card-title-content">
+                                    <h3><span>title</span>title</h3>
+                                    <p>Lorem.</p>
+                                    <ul>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia iusto mollitia culpa, consectetur laborum nostrum dolore eius, aliquid veniam facilis deleniti quaerat, iure ad natus architecto consequatur aperiam velit asperiores?</p>
+                            </div>
+                            <div class="card-footer">
+                                <p>Lorem, ipsum.</p>
+                                <ul>
+                                    <li><a href="#">link</a></li>
+                                    <li><a href="#">link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-title">
+                                <div><img src="https://picsum.photos/200/200/?random=10"></div>
+                                <div class="card-title-content">
+                                    <h3><span>title</span>title</h3>
+                                    <p>Lorem.</p>
+                                    <ul>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia iusto mollitia culpa, consectetur laborum nostrum dolore eius, aliquid veniam facilis deleniti quaerat, iure ad natus architecto consequatur aperiam velit asperiores?</p>
+                            </div>
+                            <div class="card-footer">
+                                <p>Lorem, ipsum.</p>
+                                <ul>
+                                    <li><a href="#">link</a></li>
+                                    <li><a href="#">link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="news">
+                    <div class="title news-title">
+                        <h2>NEWS</h2>
+                    </div>
+                    <div class="content news-content">
+                        <div>
+                            <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestias repudiandae, architecto earum voluptate distinctio.</a></h3>
+                        </div>
+                        <div>
+                            <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestias repudiandae, architecto earum voluptate distinctio.</a></h3>
+                        </div>
+                        <div>
+                            <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestias repudiandae, architecto earum voluptate distinctio.</a></h3>
+                        </div>
+                        <div>
+                            <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestias repudiandae, architecto earum voluptate distinctio.</a></h3>
+                        </div>
+                        <div>
+                            <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestias repudiandae, architecto earum voluptate distinctio.</a></h3>
+                        </div>
+                        <div>
+                            <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestias repudiandae, architecto earum voluptate distinctio.</a></h3>
+                        </div>
+                    </div>
+                    <div class="more-information">
+                        <a href="#">link</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="course">
+                    <div class="title course-title">
+                        <div class="short-course">
+                            <h2>SHORT</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, placeat.</p>
+                        </div>
+                        <div>
+                            <h3>title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea.</p>
+                        </div>
+                    </div>
+                    <div class="content course-content">
+                        <h3>近期課程</h3>
+                        <div class="card">
+                            <a href="#"><img src="https://picsum.photos/300/200/?random=10">
+                            <div>
+                                <div>
+                                    <p>Lorem.</p>
+                                    <p>Lorem.</p>
+                                    <p>Lorem.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div>lorem</div>
+                                    <div>Lorem.</div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="#"><img src="https://picsum.photos/300/200/?random=10">
+                            <div>
+                                <div>
+                                    <p>Lorem.</p>
+                                    <p>Lorem.</p>
+                                    <p>Lorem.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div>lorem</div>
+                                    <div>Lorem.</div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="#"><img src="https://picsum.photos/300/200/?random=10">
+                            <div>
+                                <div>
+                                    <p>Lorem.</p>
+                                    <p>Lorem.</p>
+                                    <p>Lorem.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div>lorem</div>
+                                    <div>Lorem.</div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="more-information">
+                        <a href="#">link</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="learning-path">
+                    <div class="title learning-path-title">
+                        <h2>title</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, perspiciatis.</p>
+                    </div>
+                    <div class="content learning-path-content">
+                        <div class="card">
+                            <div>
+                                <img src="https://picsum.photos/300/200/?random=10">
+                            </div>
+                            <div class="card-title">
+                                <h3>title</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae quisquam cupiditate itaque distinctio quia ducimus. Cum aspernatur totam incidunt.</p>
+                                <li><a href="#">link</a></li>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <img src="https://picsum.photos/300/200/?random=10">
+                            </div>
+                            <div class="card-title">
+                                <h3>title</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae quisquam cupiditate itaque distinctio quia ducimus. Cum aspernatur totam incidunt.</p>
+                                <li><a href="#">link</a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="extend-article">
+                    <div class="title extend-article-title">
+                        <h2>titlejgghgj</h2>
+                    </div>
+                    <div class="content extend-article-content">
+                        <div class="card">
+                            <img src="https://picsum.photos/300/200/?random=10">
+                            <a href="#"><h3>title</h3></a>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi inventore iusto beatae autem distinctio! Ipsum possimus delectus veritatis asperiores obcaecati impedit eos omnis, similique molestiae blanditiis accusantium incidunt ea exercitationem.</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/300/200/?random=10">
+                            <a href="#"><h3>title</h3></a>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum eum laboriosam ducimus aspernatur laborum, sapiente hic. Vel, officiis, at voluptate consequuntur velit nobis repellendus ipsum aspernatur architecto animi odit ipsa?</p>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/300/200/?random=10">
+                            <a href="#"><h3>title</h3></a>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi quos expedita beatae cumque doloribus ab eveniet sed eos et atque? Cupiditate reprehenderit numquam blanditiis distinctio ab officiis consectetur mollitia voluptate?</p>
+                        </div>
+                    </div>
+                    <div class="more-information">
+                        <a href="#">link</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </section>
+    <section>
+        <div class="footer">
+            <div class="footer-head">
+                <div class="footer-logo">
+                    <div><img src="https://picsum.photos/300/200/?random=10"></div>
+                    <ul>
+                        <li><a href="#"></a>link</li>
+                        <li><a href="#"></a>link</li>
+                        <li><a href="#"></a>link</li>
+                    </ul>
+                </div>
+                <div class="content footer-content">
+                    <div class="card">
+                        <p>Lorem.</p>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <p>Lorem.</p>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <p>Lorem.</p>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <p>Lorem.</p>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-foot">
+                <ul>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                    <li><a href="#">link</a></li>
+                </ul>
+            </div>
+        </div>        
+    </section>
+</body>
+</html>
