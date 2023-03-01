@@ -6,291 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>切版練習（五倍官網）</title>
     <link rel="stylesheet" href="reset.css">
-    <style>
-        /* 第#243行無法調整容器的高度   A:padding的上下就可以了 */
-        body {
-            width: 1200px;
-            margin: auto;
-        }
-        section {
-            padding: 20px 0;
-            line-height: 1.5;
-        }
-        a {
-            text-decoration: none;
-        }
-        img {
-            width: 100%;
-        } 
-        h2 {
-            font-size: 34px;
-            font-weight: 600;
-            text-align: center;
-        }
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-        }
-        li {
-            list-style: none;
-        }
-        h2 span {
-            border-bottom: 2px solid #f00;
-            padding-bottom: 10px;
-        }
-        .title p {
-            padding: 20px;
-        }     
-        .title {
-            width: 900px;
-            margin: auto;
-            padding: 10px 0 20px;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-        }  
-
-
-        nav :first-child{
-            padding-right: 10px;
-        }
-        nav li {
-            margin-left: auto;
-        }
-        nav  a{
-            display: inline-block;
-            width: 80px;
-            padding: 0 0 0 20px;
-            font-size: 14px;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            /* position: fixed; */
-            border-bottom: 1px  solid #666;
-        }
-        .logo img {
-            width: 30px;
-        }
-        .logo a {
-            display: flex;
-            padding: 5px;
-            align-items: center;
-        }
-        .header :last-child{
-            margin-left: auto;
-        }
-        .subject-title {
-            text-align: center;
-        }
-        .subject-content .card {
-            margin: 10px;
-            width: 380px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            padding: 20px;
-            text-align: center;
-        }
-        .teacher .title h2 {
-            text-align: left;
-            padding-left: 20px;
-        }
-        .teacher-title p {
-            text-align: left;
-            font-size: 18px;
-        }
-        .teacher-content span {
-            font-weight: bold;
-        }
-        .teacher-content .card-title-content span {
-            border-bottom: 2px solid #f00;
-        }
-        .teacher-content .card {
-            margin: 10px;
-            padding: 20px;
-            width: 580px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-        }
-        .teacher-content .card-title {
-            display: flex;
-            line-height: 2.5;
-        }
-        .teacher-content .card-content {
-            border-top: 1px solid #666;
-            border-bottom: 1px solid #666;
-            padding: 10px;
-        }
-        .teacher-content .card-content p {
-            padding: 5px;
-        }
-        .teacher-content .card-title div {
-            width: 30%;
-        }
-        .teacher-content .card-title img {
-            border-radius: 50%;
-        }
-        .teacher-content .card-title-content {
-            padding: 20px;
-        }
-        .teacher-content .card-title-content img {
-            width: 30px;
-        }
-        .teacher-content .card-content {
-            padding: 20px 0;
-        }
-        .teacher-content ul {
-            display: flex;
-            justify-content: flex-start;
-        }
-        .teacher-content .card-footer {
-            padding-top: 10px;
-        }
-        .teacher-content .card-title li {
-            padding: 0 5px 0 0;
-        }
-        .teacher-content .card-footer a {
-            border: 1px solid #f00;
-            border-radius: 0.25em;
-            margin-right: 20px;
-            margin-top: 10px;
-            font-size: 14px;
-            text-align: center;
-        }
-        .teacher-content .card-footer  li a{
-            display: inline-block;
-            padding: 10px;
-        }
-        .teacher-content .card-footer  p{
-            display: block;
-            width: 20%;
-            margin-top: -20px;
-            padding-left: 5px;
-            background-color: #fff;
-        }
-        .news-content div {
-            margin: 10px;
-            width: 580px;
-        }
-        .news-content h3 {
-            font-size: 28px;
-        }
-        .more-information {
-            width: 100px;
-            margin: auto;
-        }
-        .more-information a {
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-            margin: auto;
-            padding: 10px;
-            border: 1px solid #fa0;
-        }
-        .course-title {
-            display: flex;
-            width: 1200px;
-        }
-        .short-course , .course-title div {
-            margin: 10px;
-            width: 580px;
-        }
-        .course-title .short-course h2 , .course-title .short-course p {
-           text-align: left;
-           padding-left: 0;
-        }
-        .course h3 {
-            width: 100px;
-            margin-right: auto;
-            padding-left: 10px;
-        }
-        .course-content .card {
-            margin: 10px;
-            width: 380px;
-            box-sizing: border-box;
-            border: 1px solid #f00;
-            border-radius: 0.25em;
-        }
-        .course-content p {
-            border: 1px solid #666;
-            border-radius: 0.25em;
-            font-size: 12px;
-            padding: 3px;
-            margin: 3px;
-        }
-        .course-content .card div {
-            padding: 5px 10px 5px;
-        }
-        .course-content div p {
-            display: inline-block;
-        }
-        .course-content .card-footer {
-            display: flex;
-            border-top: 1px solid #666;
-            justify-content: space-between;
-            padding-bottom: 0;
-            align-items: flex-end;
-        }
-        .learning-path-title {
-            width: 1200px;
-            margin-right: auto;
-        }
-        .learning-path-content .card {
-            margin: 10px;
-            width: 578px;
-            border: 1px solid #f00;
-        }
-        .learning-path-content .card-title {
-            padding: 15px;
-        }
-        .learning-path-content .card-title h3 {
-            border-bottom: 1px solid #666;
-        }
-        .learning-path-content .card-title p {
-            padding: 20px 0;
-        }
-       .extend-article-title .title{
-            width: 100%;
-       }
-       .extend-article-content .card {
-            margin: 10px;
-            width: 380px;
-            border: 1px solid #f00;
-            box-sizing: border-box;
-       }
-       .extend-article-content  .card div {
-            border: 1px solid #00f;
-            margin-top: auto;
-       }
-       .footer-head {
-            display: flex;
-            flex-wrap: wrap;
-       }
-       .footer .footer-logo {
-            width: 455px;
-       }
-       .footer-logo img {
-            width: 50%;
-       }
-       .footer .footer-content {
-            width: 745px;
-       }
-       .footer-content .card {
-            margin: 10px;
-            width: 200px;
-            border: 1px solid #f00;
-            box-sizing: border-box;
-       }
-       .footer-foot ul{
-            display: flex;
-            justify-content: center;
-       }
-       .footer-foot li {
-            padding: 20px;
-            font-size: 22px;
-       }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
@@ -298,7 +14,7 @@
             <div class="logo">
                 <a href="https://5xruby.tw/">
                     <div><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgODEuMTMgMzcuMyI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMik7fS5jbHMtMntmaWxsOiMxYTFhMWE7fS5jbHMtM3tmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU4MSk7fS5jbHMtNHtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU3Myk7fS5jbHMtNXtmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzU1OSk7fS5jbHMtNntmaWxsOnVybCgj5pyq5ZG95ZCN5ry45bGkXzUxMi0yKTt9PC9zdHlsZT48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTIiIHgxPSIyOC42NCIgeTE9Ii0xLjA4IiB4Mj0iNTQuNiIgeTI9IjI0Ljg4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTk1NzUwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjA5NTgwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81ODEiIHgxPSIyMy45NCIgeTE9IjguNzMiIHgyPSI0NS43MyIgeTI9IjMwLjUyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTczMzJlIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWQ3YzZmIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NzMiIHgxPSIyOS4zMSIgeTE9IjE0LjQxIiB4Mj0iMjkuMzEiIHkyPSItMC44IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZjE5ZDk2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWI3MDYzIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81NTkiIHgxPSI1MS44NCIgeTE9IjEzLjg2IiB4Mj0iNTEuODQiIHkyPSIwLjY1IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwLjAxIiBzdG9wLWNvbG9yPSIjZjZjMGJkIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZWY5MThiIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9IuacquWRveWQjea8uOWxpF81MTItMiIgeDE9IjQwLjgyIiB5MT0iMTQuMzQiIHgyPSI1Mi41MyIgeTI9IjI2LjA1IiB4bGluazpocmVmPSIj5pyq5ZG95ZCN5ry45bGkXzUxMiIvPjwvZGVmcz48ZyBpZD0iTE9HT1/oqK3oqIgiIGRhdGEtbmFtZT0iTE9HTyDoqK3oqIgiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1Ni43IDAuNTQgNDAuNTcgMC41NCAyNC40NCAwLjU0IDE4LjA1IDEzLjQ0IDQwLjU3IDM3LjI4IDYzLjExIDEzLjQ0IDU2LjcgMC41NCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTc2LjMzLDExLjQ3VjYuNjRhNi40NSw2LjQ1LDAsMCwwLTEuODYtNC44QTYuODIsNi44MiwwLDAsMCw2OS41OCwwSDY1LjE5VjUuMThINjlhMiwyLDAsMCwxLDIuMTYsMi4xNHY1LjMxYTUuMTksNS4xOSwwLDAsMCwxLjQ2LDMuODgsNy41OSw3LjU5LDAsMCwwLDMuOSwxLjgsNy41MSw3LjUxLDAsMCwwLTMuOSwxLjc5QTUuMjEsNS4yMSwwLDAsMCw3MS4xNywyNFYyOS4zQTIsMiwwLDAsMSw2OSwzMS40M0g2NS4xOXY1LjE2aDQuMzlhNi44Miw2LjgyLDAsMCwwLDQuODktMS44MkE2LjQ1LDYuNDUsMCwwLDAsNzYuMzMsMzBWMjUuMTRjMC0yLjY2LDEuNDItNC4yLDQuNDMtNC4yVjE1LjY3Qzc3Ljc1LDE1LjY3LDc2LjMzLDE0LjE0LDc2LjMzLDExLjQ3WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTEwLDEyLjYzVjcuMzJhMiwyLDAsMCwxLDIuMTYtMi4xNGgzLjgyVjBIMTEuNTZhNi44Myw2LjgzLDAsMCwwLTQuOSwxLjgyLDYuNDUsNi40NSwwLDAsMC0xLjg1LDQuOHY0LjgzYzAsMi42Ny0xLjQzLDQuMi00LjQ0LDQuMnY1LjI3YzMsMCw0LjQ0LDEuNTQsNC40NCw0LjJWMzBhNi40NSw2LjQ1LDAsMCwwLDEuODUsNC44LDYuODMsNi44MywwLDAsMCw0LjksMS44Mmg0LjM4VjMxLjQzSDEyLjEyQTIsMiwwLDAsMSwxMCwyOS4zVjI0QTUuMjEsNS4yMSwwLDAsMCw4LjUsMjAuMWE3LjUxLDcuNTEsMCwwLDAtMy45LTEuNzksNy41OSw3LjU5LDAsMCwwLDMuOS0xLjhBNS4xOSw1LjE5LDAsMCwwLDEwLDEyLjYzWiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIxOC4wNSAxMy40NCA0MC41NyAzNy4yOCA0MC41NyAxMy40NCAxOC4wNSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNCIgcG9pbnRzPSI0MC41NyAwLjU0IDI0LjQ0IDAuNTQgMTguMDUgMTMuNDQgNDAuNTcgMTMuNDQgNDAuNTcgMC41NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNSIgcG9pbnRzPSI2My4xMSAxMy40NCA1Ni43IDAuNTQgNDAuNTcgMC41NCA0MC41NyAxMy40NCA2My4xMSAxMy40NCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNiIgcG9pbnRzPSI0MC41NyAxMy40NCA0MC41NyAzNy4yOCA2My4xMSAxMy40NCA0MC41NyAxMy40NCIvPjwvZz48L3N2Zz4="></div>
-                    <h1>五倍紅寶石，專業程式教育機構</h1>
+                    <h1>五倍紅寶石</h1>
                 </a>
             </div>
             <nav>
@@ -359,9 +75,9 @@
                                     <p><span>HTML</span>/ CSS 講師</p>
                                     <h3>李建杭 (Amos Lee)</h3>
                                     <ul>
-                                        <li><a href="https://csscoke.com/" target="_blank"><img src="../images/website_icon.jpg"></a></li>
-                                        <li><a href="https://www.facebook.com/banPrint" target="_blank"><img src="../images/facebook_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://www.youtube.com/user/AmosLee1" target="_blank"><img src="../images/youtube_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://csscoke.com/" target="_blank"><img src="website_icon.jpg"></a></li>
+                                        <li><a href="https://www.facebook.com/banPrint" target="_blank"><img src="facebook_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://www.youtube.com/user/AmosLee1" target="_blank"><img src="youtube_icon.jpg" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -385,11 +101,11 @@
                                     <p><span>Ruby</span>/ Git 講師</p>
                                     <h3>高見龍 (Eddie Kao)</h3>
                                     <ul>
-                                        <li><a href="https://kaochenlong.com/" target="_blank"><img src="../images/website_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://www.facebook.com/eddiekao" target="_blank"><img src="../images/facebook_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://twitter.com/eddiekao" target="_blank"><img src="../images/twitter_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://github.com/kaochenlong" target="_blank"><img src="../images/github_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://www.youtube.com/c/kaochenlong" target="_blank"><img src="../images/youtube_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://kaochenlong.com/" target="_blank"><img src="website_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://www.facebook.com/eddiekao" target="_blank"><img src="facebook_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://twitter.com/eddiekao" target="_blank"><img src="twitter_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://github.com/kaochenlong" target="_blank"><img src="github_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://www.youtube.com/c/kaochenlong" target="_blank"><img src="youtube_icon.jpg" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -413,10 +129,10 @@
                                     <p><span>Vue /</span>JavaScript 講師</p>
                                     <h3>許國政 (Kuro Hsu)</h3>
                                     <ul>
-                                        <li><a href="https://kuro.tw/" target="_blank"><img src="../images/website_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://www.facebook.com/kurotanshi" target="_blank"><img src="../images/facebook_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://twitter.com/kurotanshi" target="_blank"><img src="../images/twitter_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://github.com/kurotanshi" target="_blank"><img src="../images/github_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://kuro.tw/" target="_blank"><img src="website_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://www.facebook.com/kurotanshi" target="_blank"><img src="facebook_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://twitter.com/kurotanshi" target="_blank"><img src="twitter_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://github.com/kurotanshi" target="_blank"><img src="github_icon.jpg" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -437,12 +153,12 @@
                             <div class="card-title">
                                 <div><img src="https://images.ctfassets.net/8er52l3j5u76/51UtTdV2OseidENCorY9Qk/d31bb39e7832b65e57700b32185760e0/milkmidi.jpg?fm=webp&q=80"></div>
                                 <div class="card-title-content">
-                                    <p><span>React</span>Lorem.</p>
+                                    <p><span>React</span>講師</p>
                                     <h3>廖珀均 (奶綠茶)</h3>
                                     <ul>
-                                        <li><a href="https://milkmidi.medium.com/" target="_blank"><img src="../images/website_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://www.facebook.com/milkmidi" target="_blank"><img src="../images/facebook_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://github.com/milkmidi" target="_blank"><img src="../images/github_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://milkmidi.medium.com/" target="_blank"><img src="website_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://www.facebook.com/milkmidi" target="_blank"><img src="facebook_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://github.com/milkmidi" target="_blank"><img src="github_icon.jpg" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -466,8 +182,8 @@
                                     <p><span>HTML</span>CSS 講師</p>
                                     <h3>孫于婷 (Cat)</h3>
                                     <ul>
-                                        <li><a href="https://medium.com/@catsun" target="_blank"><img src="../images/website_icon.jpg" alt=""></a></li>
-                                        <li><a href="https://www.facebook.com/black.cat.sun?mibextid=LQQJ4d"><img src="../images/facebook_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://medium.com/@catsun" target="_blank"><img src="website_icon.jpg" alt=""></a></li>
+                                        <li><a href="https://www.facebook.com/black.cat.sun?mibextid=LQQJ4d" target="_blank"><img src="facebook_icon.jpg" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -592,30 +308,30 @@
                     </div>
                     <div class="content learning-path-content">
                         <div class="card">
-                            <a href="">
-                                <div>
-                                    <img src="https://picsum.photos/300/200/?random=10">
-                                </div>
-                                <div class="card-title">
+                            <a href="https://base.5xcampus.com/" target="_blank">
+                                <div class="card-title coding">
                                     <h3>I'm coding it!</h3><h3>微痛轉職工程師</h3>
-                                    <p>線上課程不限時間、地點，自己掌握學習進度。課程內容包含前後端課程，附加完課即提供免費履歷健檢服務。適合在職、喜歡自己掌握進度的人。</p>
                                 </div>
-                                <div>
-                                    <p>前往課程</p>
+                                <div class="card-content">
+                                    <h3>線上課程</h3>
+                                    <p>不限時間、地點，自己掌握學習進度。課程內容包含前後端課程，附加完課即提供免費履歷健檢服務。適合在職、喜歡自己掌握進度的人。</p>
+                                </div>
+                                <div class="card-foot">
+                                    <a href="#"><p>前往課程</p><p>></p></a>
                                 </div>
                             </a>
                         </div>
                         <div class="card">
-                            <a href="">
-                                <div>
-                                    <img src="https://picsum.photos/300/200/?random=10">
-                                </div>
-                                <div class="card-title">
+                            <a href="https://astro.5xruby.tw/" target="_blank">
+                                <div class="card-title camp">
                                     <h3>ASTRO Camp</h3><h3>全端工程師實戰訓練營</h3>
-                                    <p>三個月實戰轉職全端工程師除了提供前端到後端課程外，課程期間還包含履歷健檢、模擬面試、專題製作、企業交流等服務。適合有時間決心轉職工程師的素人。</p>
                                 </div>
-                                <div>
-                                    <p>前往課程</p>
+                                <div class="card-content">
+                                    <h3>三個月實戰轉職全端工程師</h3>
+                                    <p>除了提供前端到後端課程外，課程期間還包含履歷健檢、模擬面試、專題製作、企業交流等服務。適合有時間決心轉職工程師的素人。</p>
+                                </div>
+                                <div class="card-foot">
+                                    <a href="#"><p>前往課程</p><p>></p></a>
                                 </div>
                             </a>
                         </div>
@@ -636,6 +352,7 @@
                                 <div>
                                     <h3>平面設計師踏入程式領域，走上前端技術的道路</h3>
                                     <p>By 五倍紅寶石課程顧問團隊・12月 8 2022・技術文章</p>
+                                    
                                 </div>
                             </a>
                         </div>
@@ -657,82 +374,79 @@
                                 </div>
                                 <div>
                                     <h3>2022 最適合你的前端框架： React 發展趨勢和前景！</h3>
-                                    <p>By 五倍紅寶石課程顧問團隊・5月 28 2022・技術文章</p>
+                                    <div>
+                                        <p>By 五倍紅寶石課程顧問團隊・5月 28 2022・技術文章</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <div class="more-information">
-                        <a href="#">link</a>
+                        <a href="https://5xruby.tw/posts">更多文章</a>
                     </div>
                 </div>
             </section>
         </article>
     </section>
     <section>
-        <div class="footer">
-            <div class="footer-head">
-                <div class="footer-logo">
-                    <div><img src="https://picsum.photos/300/200/?random=10"></div>
+        <div class="links">
+            <div class="links-head">
+                <div class="links-logo">
+                    <div><img src="https://63f460d58b7cfb0008c85166--5xtraining.netlify.app/_next/static/images/inverted_logo-dde38e95b20e76407a7ab3e7db2e1c64.svg"></div>
                     <ul>
-                        <li><a href="#"></a>link</li>
-                        <li><a href="#"></a>link</li>
-                        <li><a href="#"></a>link</li>
+                        <li><a href="#" target="_blank">電話 | (02) 2331-5247</a></li>
+                        <li><a href="#" target="_blank">信箱 | course@5xcampus.com</a></li>
+                        <li><a href="https://www.google.com/maps/place/%E4%BA%94%E5%80%8D%E7%B4%85%E5%AF%B6%E7%9F%B3%E5%B0%88%E6%A5%AD%E7%A8%8B%E5%BC%8F%E6%95%99%E8%82%B2%E6%A9%9F%E6%A7%8B+%EF%BD%9C%E5%AF%A6%E6%88%B0%E8%BD%89%E8%81%B7%E3%83%BB%E4%BC%81%E6%A5%AD%E5%85%A7%E8%A8%93%EF%BC%8E%E7%B6%B2%E9%A0%81%E9%96%8B%E7%99%BC%E6%9C%8D%E5%8B%99/@25.0424352,121.5137324,17z/data=!3m1!4b1!4m6!3m5!1s0x3442a90b4bce8c97:0xa8402e622aa7b148!8m2!3d25.0424352!4d121.5137324!16s%2Fg%2F11c5s6ldzm" target="_blank">地址 | 10046 台北市中正區衡陽路 7 號 5 樓</a></li>
                     </ul>
                 </div>
-                <div class="content footer-content">
+                <div class="content links-content">
                     <div class="card">
-                        <p>Lorem.</p>
+                        <p>專業課程</p>
                         <ul>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
+                            <li><a href="https://astro.5xruby.tw/">ASTRO Camp</a></li>
+                            <li><a href="https://base.5xcampus.com/">線上課程</a></li>
+                            <li><a href="https://5xruby.tw/courses">實體課程</a></li>
                         </ul>
                     </div>
                     <div class="card">
-                        <p>Lorem.</p>
+                        <p>關於我們</p>
                         <ul>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
+                            <li><a href="https://5xruby.tw/about">關於五倍紅寶石</a></li>
+                            <li><a href="https://5xruby.tw/contacts">聯絡我們</a></li>
+                            <li><a href="https://5xruby.tw/press">媒體報導</a></li>
+                            <li><a href="https://5xruby.tw/joinus">加入我們</a></li>
                         </ul>
                     </div>
                     <div class="card">
-                        <p>Lorem.</p>
+                        <p>部落格</p>
                         <ul>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
+                            <li><a href="https://5xruby.tw/posts">技術文章</a></li>
+                            <li><a href="https://5xruby.tw/news">五倍消息</a></li>
                         </ul>
                     </div>
                     <div class="card">
-                        <p>Lorem.</p>
+                        <p>幫助與政策</p>
                         <ul>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
-                            <li><a href="#">link</a></li>
+                            <li><a href="https://5xruby.tw/faq">常見問題</a></li>
+                            <li><a href="https://5xruby.tw/privacy-policy">隱私權政策</a></li>
+                            <li><a href="https://5xruby.tw/terms-of-service">服務條款</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="footer-foot">
+            <div class="links-foot">
                 <ul>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
+                    <li><a href="https://www.facebook.com/5xruby" target="_blank"><img src="facebook_icon.jpg" alt=""></a></li>
+                    <li><a href="https://www.youtube.com/c/5xruby_edu" target="_blank"><img src="youtube_icon.jpg" alt=""></a></li>
+                    <li><a href="https://github.com/5xtraining" target="_blank"><img src="github_icon.jpg" alt=""></a></li>
+                    <li><a href="https://5xruby-astrocamp.medium.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEelmnv7lh5KotTcteNu15v5ixDDQVr3XTA&usqp=CAU" alt=""></a></li>
+                    <li><a href="https://page.line.me/xmw6059j?openQrModal=true" target="_blank"><img src="https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/00/7c/5f/007c5f32-33c8-d2da-407b-248a8a318b9c/LINE.png/1200x600bf.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/5xruby_edu" target="_blank"><img src="twitter_icon.jpg" alt=""></a></li>
                 </ul>
             </div>
+        </div>
+        <div class="footer">
+            &copy; copyright 2023 by Eric 
         </div>        
     </section>
 </body>

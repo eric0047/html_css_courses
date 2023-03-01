@@ -218,6 +218,7 @@ nav  a{
 .more-information a:hover {
     background-color: #b00;
     border: 1px solid #b00;
+    color: #fff;
 }
 .course {
     background-color: #333;
@@ -250,12 +251,11 @@ nav  a{
     margin: 10px;
     width: 380px;
     box-sizing: border-box;
-    border-radius: 0.25em;
+    border-radius: 0.25rem;
     background-color: #fff;
+    border: 1px solid #666;
 }
 .course-content p {
-    border: 1px solid #666;
-    border-radius: 0.25em;
     font-size: 12px;
     padding: 3px;
     margin: 3px;
@@ -362,7 +362,7 @@ nav  a{
     width: 380px;
     box-sizing: border-box;
 }
-.extend-article-content :hover {
+.extend-article-content a:hover {
     color: #f55;
 }
 .links {
