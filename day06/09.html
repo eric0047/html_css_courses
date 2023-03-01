@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid #f00;
+            width: 300px;
+            margin: 30px;
+            position: relative;
+        }
+        .card img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .card .tag {
+            background-color: #fa0;
+            position: absolute;
+            top: 5px;
+            left: -11px;
+        }
+        .card .tag::after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border-top: 10px solid #000;
+            border-left: 10px solid #0000ff00;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <div class="tag">五倍嚴選</div>
+        <img src="https://picsum.photos/300/200/?random=10">
+        <h2>title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id, doloribus debitis dolor ipsa distinctio nemo repellat laudantium laboriosam voluptas labore beatae deserunt voluptates, dolorem tempora quis, magni harum cum?</p>
+    </div>
+</body>
+</html>
