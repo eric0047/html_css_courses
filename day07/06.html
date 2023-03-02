@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card  {
+            width: 400px;
+            aspect-ratio: 2/1;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+        }
+        .pic-img,
+        .text {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            background-color: #f0000066;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+        }
+        .pic-img img {
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="pic-img">
+            <img src="https://picsum.photos/300/200/?random=10">
+        </div>
+        <div class="text">
+            <h3>jkbebrg</h3>
+        </div>
+    </div>
+</body>
+</html>
