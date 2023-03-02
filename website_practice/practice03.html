@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            width: 1200px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .title {
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        h2,
+        h3 {
+            font-size: 30px;
+            padding: 10px;
+        }
+        .title span {
+            color: #c00;
+            font-size: 45px;
+            padding: 8px;
+            font-weight: 700;
+        }
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        .pic {
+            position: relative;
+        }
+         .pic,
+         .text {
+            width: 600px;
+            box-sizing: border-box;
+        }
+        .card .text {
+            padding: 20px;
+            background-color: #fff;
+            z-index: -2;
+        }
+        .card span {
+            display: block;
+            font-size: 1.5em;
+            color: #e00000;
+        }
+        .pic img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 16/9;
+            vertical-align: top;
+        }
+        h3 {
+            padding: 20px 0;
+        }
+        .card .pic::after {
+            content: "";
+            width: 600px;
+            background-color: #a0000044;
+            height: 100%;
+            position: absolute;
+            display: block;
+            bottom: -5px;
+            right: -5px;
+            margin-bottom: -5px;
+            margin-right: -5px;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <article class="wrap">
+        <section class="title">
+            <h2><span>5</span>大裝備讓你<span>3</span>個月立即上工</h2>
+            <p>清晰理論教學打通任督二脈，獨家專案實作扎穩職場馬步</p>
+        </section>
+        <section class="card">
+            <div class="pic">
+                <img src="https://astro.5xruby.tw/images/photos/img_feature_1-851638ef.webp">
+            </div>
+            <div class="text">
+                <h3><span>01</span>獨家專案教學法</h3>
+                <p>由 20 年程式開發及 10 年以上教學經驗的高見龍領軍，以貼近業界實務的方式教學，並採用日本知名 Ruby 公司的標準來訓練你的程式邏輯，讓完全沒接觸過程式的你，在課程上完後，能有屬於自己的作品，而且還能快速融入業界工程師的實務工作！</p>
+            </div>
+        </section>
+        <section class="card">
+            <div class="pic">
+                <img src="https://astro.5xruby.tw/images/photos/img_feature_2-3e53f8ac.webp">
+            </div>
+            <div class="text">
+                <h3><span>02</span>業界資深助教群</h3>
+                <p>有別於坊間用業務顧問或大學生助教的幌子，我們使用業界資深的助教群，於產業深耕至少 10 年以上。你要走的路，他們都曾經走過，讓你在上課期間碰到的任何問題，都能獲得最即時、最專業的解答！</p>
+            </div>
+        </section>
+        <section class="card">
+            <div class="pic">
+                <img src="https://astro.5xruby.tw/images/photos/img_feature_3-d9c559d7.webp">
+            </div>
+            <div class="text">
+                <h3><span>03</span>保證 3 次面試機會</h3>
+                <p>只要完成評分項目，保證至少媒合 3 次面試！找工作所需的履歷撰寫以及面試技巧，都會有專人輔導、協助你用最快的時間，學以致用！</p>
+            </div>
+        </section>
+        <section class="card">
+            <div class="pic">
+                <img src="https://astro.5xruby.tw/images/photos/img_feature_4-1eeff701.webp">
+            </div>
+            <div class="text">
+                <h3><span>04</span>彈性的補課制度</h3>
+                <p>每堂課皆全程錄影，讓你臨時有事也不怕，更可以反覆練習加深記憶。</p>
+            </div>
+        </section>
+        <section class="card">
+            <div class="pic">
+                <img src="https://astro.5xruby.tw/images/photos/img_feature_5-ef10b137.webp">
+            </div>
+            <div class="text">
+                <h3><span>05</span>只要你有心，絕對讓你問到會、問到飽</h3>
+                <p>Astro 聚集眾多「非本科系」的學員，我們深知在學習程式的初期，你可能會有大量的疑問，所以幫你準備好了實戰助教群，讓你線上線下都可即時解惑。還有還有，由於我們教室隔壁就坐著一群工程師，逮到他們也都可以問問題。這些，都是為了保證讓你在學習程式時，能夠全速前進！</p>
+            </div>
+        </section>
+    </article>
+
+</body>
+</html>

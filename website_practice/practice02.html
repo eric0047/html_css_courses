@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --custom_border: 1px solid #fff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            padding-bottom: 20px;
+            color: #d33;
+        }
+        h3 {
+            padding: 20px 0;
+            font-size: 20px;
+        }
+        .dream {
+            width: 960px;
+            margin: auto;
+            margin-top: 30px;
+        }
+        .title  {
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .dream .advantage {
+            width: 700px;
+            /* margin: 10px; */
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .dream .freedom {
+            width: 220px;
+            margin: 10px;
+            padding: 30px;
+            box-sizing: border-box;
+            background-color: #606;
+            color: #fff;
+            border: var(--custom_border);
+            border-radius: 0.25rem;
+        }
+        .dream .advantage .card {
+            width: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            /* padding: 20px; */
+            justify-content: center;
+            gap: 20px;
+            color: #fff;
+        }
+        .dream .advantage .card:nth-child(odd) {
+           flex-direction: row-reverse;
+           padding-bottom: 20px;
+        }
+        .dream .card .pic {
+            width: 30%;
+        }
+        .pic img {
+            aspect-ratio: 1/1;
+            border: var(--custom_border);
+            border-radius: 0.25em;
+        }
+        .dream .card .text {
+            width: 60%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: var(--custom_border);
+            border-radius: 0.25em;
+        }
+        .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card:first-child .text {
+            background-color: #f55;
+        }
+        .card:last-child .text {
+            background-color: #d22;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="dream">
+        <div class="title">
+            <h2>如果你是全端工程師 ⋯⋯</h2>
+        </div>
+        <div class="content">
+            <div class="advantage">
+                <div class="card">
+                    <div class="pic">
+                        <img src="https://astro.5xruby.tw/images/photos/img_foreword_international_skill-2d9c67c3.webp">
+                    </div>
+                    <div class="text">
+                        <h3>薪情好</h3>
+                        <p>你的起薪是其他行業的高薪！拿行銷產業舉例，三年經驗平均薪資可以到 42,000 算不錯；但以寫程式來說，有二年經驗拿 50,000 只是平均水平！</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="pic">
+                        <img src="https://astro.5xruby.tw/images/photos/img_foreword_flourish_industry-6757e106.webp">
+                    </div>
+                    <div class="text">
+                        <h3>不靠爸</h3>
+                        <p>許多產業除了能力之外，你的背景或人脈關係對於職涯發展有很大的影響。作為工程師，能力就是衡量你的唯一標準！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="freedom">
+                <h3>說走就走的自由度</h3>
+                <p>基於程式能力的特殊性，你可以快速進入各個產業，且適應期非常短。一位掃地阿姨，都需要瞭解環境才能開始打掃；對你來說，只是換一張辦公桌與電腦椅的事情！</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

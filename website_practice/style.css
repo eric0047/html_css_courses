@@ -352,16 +352,32 @@ nav a:hover::before {
 }
 .short-course , .course-title div {
     margin: 10px;
-    width: 580px;
+    width: 550px;
+    padding-top: 50px;
 }
 .course-title .short-course h2 , .course-title .short-course p {
    text-align: left;
    padding-left: 0;
 }
 .course h3 {
-    width: 100px;
     margin-right: auto;
     padding-left: 10px;
+}
+.course .course-title .others {
+    background-color: #f55;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 30px;
+    position: relative;
+}
+.others::before {
+    position: absolute;
+    content: "";
+    background-color: #f55;
+    height: 50px;
+    top: 0;
+    left: 0;
+    
 }
 .course-content .card {
     margin: 10px;
