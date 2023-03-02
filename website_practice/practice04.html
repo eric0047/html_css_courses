@@ -6,107 +6,323 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        li {
+            list-style: none;
+        }
         .card {
             display: grid;
             width: 960px;
-            grid-template-columns: repeat(3 , 320px);
-            grid-template-rows: repeat(4 , 1fr);
+            grid-template-columns: repeat(6 , 1fr);
+            grid-template-rows: repeat(3 , 150px) 50px 1fr;
+            margin: auto;
+            padding: 50px;
         }
         .card .title {
             display: grid;
-            /* grid-template-rows: repeat(2 , 50%);
-             */
-             grid-row: 1/3;
+            grid-template-rows: repeat(2 , 50%);
+            grid-row: 1/3;
+            grid-column: 1/4;
+            position: relative;
+            z-index: 1;  
+        }
+        .card:nth-child(even)  .title {
+            grid-column: 4/7;
+
         }
         .title_strong {
             display: flex;
+            justify-content: space-between;
             align-items: center;
+            width: 100%;
+            background-color: #c00;
+            color: #fff;
+            font-size: 20px;
+        }
+        .card:nth-child(even) .title_strong {
+            flex-direction: row-reverse;
+        }
+        .title_strong span {
+            padding: 0;
+            margin: 0;
+            font-size: 145px;
+            text-align: center;
+            transform: rotate(90deg);
+            font-family: Helvetica,Verdana,Arial,"\5FAE\8EDF\6B63\9ED1\9AD4","Microsoft JhengHei","\5137\9ED1 Pro","LiHei Pro",sans-serif;
+        }
+        .title_strong h2 {
+            padding: 10px;
+            padding-right: 50px;
+            font-size: 50px;
+        }
+        .card:nth-child(even) .title_strong h2 {
+            padding-left: 50px;
+        }
+        .title-content {
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
         }
         .pic {
             display: grid;
-            grid-row: 2/4;
+            grid-row: 2/-2;
             position: relative;
-            grid-column: 2/4;
+            grid-column: 2/7;
+        }
+        .card:nth-child(even) .pic {
+            grid-column: 1/6;
         }
         .pic img {
             width: 100%;
-            /* position: absolute; */
             vertical-align: top;
             height: 100%;
             object-fit: cover;
+            aspect-ratio: 16/9;
         }
-        .content {
+        .pic::after {
+            content: "";
+            width: 300px;
+            height: 300px;
+            background-color: #ddd;
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            z-index: -1;
+        }
+        .card .content {
             display: grid;
-            grid-row:  4/5;
-            grid-column: 1/2;
+            grid-row:  4/6;
+            grid-column: 1/5;
+            background-color: #ccc;
+            position: relative;
+            z-index: 1;
+        }
+        .card:nth-child(even) .content {
+            grid-column: 3/7;
+        }
+        .card .content h3 {
+            display: flex;
+            color: #c00;
+            font-size: 16px;
+            align-items: center;
+            padding-left: 5px;
+        }
+        .card .content h3::after {
+            content: "";
+            width: 70%;
+            margin-left: 10px;
+            height: 0;
+            border: 1px solid #c00;
+        }
+        ul {
+            margin-top: 0;
+        }
+        ul li {
+            background-color: #000;
+            color: #fff;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 0.25em;
+        }
+        ul ul li {
+            background-color: #ccc;
+            color: #666;
+            font-size: 14px;
+            padding: 0 30px;;
+            margin-left: 20px;
+            list-style-type: disc;
         }
     </style>
 </head>
 <body>
     
-    <section class="card">
-        <div class="title">
-            <div class="title_strong">
-                <span>01</span><h2>操控樂趣</h2>
+    <article class="wrap">
+        <section class="card">
+            <div class="title">
+                <div class="title_strong">
+                    <span>01</span><h2>操控樂趣</h2>
+                </div>
+                <div class="title-content">
+                    <h2>人人滿意的駕駛體驗</h2>
+                    <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感</p>
+                </div>
             </div>
-            <div class="title-content">
-                <h2>title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, dolore!</p>
+            <div class="pic">
+                <img src="https://i.ytimg.com/vi_webp/WH9kmoDw0fI/maxresdefault.webp">
             </div>
-        </div>
-        <div class="pic">
-            <img src="https://picsum.photos/300/200/?random=10">
-        </div>
-        <div class="content">
-            <h3>title</h3>
-            <stong>strong word</stong>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, deserunt.</p>
-            <strong>strong word</strong>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, optio?</p>
-        </div>
-    </section>
-    <!-- <section class="card">
-        <div class="title">
-            <div class="title_strong">
-                <span>01</span><h2>操控樂趣</h2>
+            <div class="content">
+                <h3>因為我們做了這些革新</h3>
+                <ul>
+                    <li>
+                        低重心設計
+                    </li>
+                    <ul>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                    </ul>
+                    <li>
+                        車體剛性強化
+                    </li>
+                    <ul>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                    </ul>
+                    <li>
+                        四輪獨立懸吊
+                    </li>
+                    <ul>
+                        <li>搭載全新四輪獨立懸吊設計，透過懸吊的高乘載強度，保持輪胎抓地力，同時兼顧轉向靈敏度及清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </ul>
             </div>
-            <div class="title-content">
-                <h2>title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, dolore!</p>
+        </section>
+        <section class="card">
+            <div class="title">
+                <div class="title_strong">
+                    <span>02</span><h2>安全守護</h2>
+                </div>
+                <div class="title-content">
+                    <h2>人人滿意的駕駛體驗</h2>
+                    <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感</p>
+                </div>
             </div>
-        </div>
-        <div class="pic">
-            <img src="https://picsum.photos/300/200/?random=10">
-        </div>
-        <div class="content">
-            <h3>title</h3>
-            <stong>strong word</stong>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, deserunt.</p>
-            <strong>strong word</strong>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, optio?</p>
-        </div>
-    </section>
-    <section class="card">
-        <div class="title">
-            <div class="title_strong">
-                <span>01</span><h2>操控樂趣</h2>
+            <div class="pic">
+                <img src="https://www.toyota.com.tw/asset/img/tech_tnga/m/advantage-2-video-button-bg.png?37ae25d7">
             </div>
-            <div class="title-content">
-                <h2>title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, dolore!</p>
+            <div class="content">
+                <h3>因為我們做了這些革新</h3>
+                <ul>
+                    <li>
+                        低重心設計
+                    </li>
+                    <ul>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                    </ul>
+                    <li>
+                        車體剛性強化
+                    </li>
+                    <ul>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                    </ul>
+                    <li>
+                        四輪獨立懸吊
+                    </li>
+                    <ul>
+                        <li>搭載全新四輪獨立懸吊設計，透過懸吊的高乘載強度，保持輪胎抓地力，同時兼顧轉向靈敏度及清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </ul>
             </div>
-        </div>
-        <div class="pic">
-            <img src="https://picsum.photos/300/200/?random=10">
-        </div>
-        <div class="content">
-            <h3>title</h3>
-            <stong>strong word</stong>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, deserunt.</p>
-            <strong>strong word</strong>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, optio?</p>
-        </div>
-    </section> -->
+        </section>
+        <section class="card">
+            <div class="title">
+                <div class="title_strong">
+                    <span>03</span><h2>乘坐舒適</h2>
+                </div>
+                <div class="title-content">
+                    <h2>人人滿意的駕駛體驗</h2>
+                    <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感</p>
+                </div>
+            </div>
+            <div class="pic">
+                <img src="https://www.toyota.com.tw/asset/img/tech_tnga/m/advantage-3-video-button-bg.png?f3db8b07">
+            </div>
+            <div class="content">
+                <h3>因為我們做了這些革新</h3>
+                <ul>
+                    <li>
+                        低重心設計
+                    </li>
+                    <ul>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                    </ul>
+                    <li>
+                        車體剛性強化
+                    </li>
+                    <ul>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                    </ul>
+                    <li>
+                        四輪獨立懸吊
+                    </li>
+                    <ul>
+                        <li>搭載全新四輪獨立懸吊設計，透過懸吊的高乘載強度，保持輪胎抓地力，同時兼顧轉向靈敏度及清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+        <section class="card">
+            <div class="title">
+                <div class="title_strong">
+                    <span>04</span><h2>以人為本</h2>
+                </div>
+                <div class="title-content">
+                    <h2>人人滿意的駕駛體驗</h2>
+                    <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感</p>
+                </div>
+            </div>
+            <div class="pic">
+                <img src="	https://www.toyota.com.tw/asset/img/tech_tnga/m/advantage-4-video-button-bg.png?4868cea1">
+            </div>
+            <div class="content">
+                <h3>因為我們做了這些革新</h3>
+                <ul>
+                    <li>
+                        低重心設計
+                    </li>
+                    <ul>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                    </ul>
+                    <li>
+                        車體剛性強化
+                    </li>
+                    <ul>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                    </ul>
+                    <li>
+                        四輪獨立懸吊
+                    </li>
+                    <ul>
+                        <li>搭載全新四輪獨立懸吊設計，透過懸吊的高乘載強度，保持輪胎抓地力，同時兼顧轉向靈敏度及清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+        <section class="card">
+            <div class="title">
+                <div class="title_strong">
+                    <span>05</span><h2>引以為傲</h2>
+                </div>
+                <div class="title-content">
+                    <h2>人人滿意的駕駛體驗</h2>
+                    <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感</p>
+                </div>
+            </div>
+            <div class="pic">
+                <img src="https://www.toyota.com.tw/asset/img/tech_tnga/m/advantage-5-video-button-bg.png?f790749c">
+            </div>
+            <div class="content">
+                <h3>因為我們做了這些革新</h3>
+                <ul>
+                    <li>
+                        低重心設計
+                    </li>
+                    <ul>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                    </ul>
+                    <li>
+                        車體剛性強化
+                    </li>
+                    <ul>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                    </ul>
+                    <li>
+                        四輪獨立懸吊
+                    </li>
+                    <ul>
+                        <li>搭載全新四輪獨立懸吊設計，透過懸吊的高乘載強度，保持輪胎抓地力，同時兼顧轉向靈敏度及清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </ul>
+            </div>
+        </section>
+    </article>
+
 
 </body>
 </html>
