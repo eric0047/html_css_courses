@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            margin: auto;
+        }
+        .card {
+            background-color: #f00;
+            height: 100px;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .wrap {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .card {
+              width: calc(33.333333% - 20px);
+            } 
+        }
+        @media screen and (width >= 1200px) {
+            .card {
+                width: calc(16.666666% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="wrap">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+</body>
+</html>

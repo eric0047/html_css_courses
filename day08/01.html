@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+        }
+
+        /* @media 裝置類型 and (條件一) and (條件二) {
+            符合裝置條件類型時執行的CSS
+        } */
+
+
+        /* @media screen and (min-width: 768px) {
+            .box {
+                background-color: #00f;
+            }
+        } */
+
+        /* 平板 */
+        @media  screen and (width >= 768px){
+            .box {
+                background-color: #fa0;
+                height: 400px;
+            }
+        }
+
+        /* 桌機 */
+        @media  screen and (min-width: 1200px){
+            .box {
+                background-color: #00f;
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"> </div>
+
+</body>
+</html>

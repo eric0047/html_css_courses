@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            width: 1200px;
+            border: 1px solid #000;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* 定寬容器 */
+        .column {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        /* 欄容器 */
+        .card {
+            height: 100px;
+            background-color: #f00;
+        }
+        /* 資料容器 */
+
+        @media screen and (width >= 768px){
+            .column {
+                width: 50%;
+            }
+        }
+
+        @media screen and (width >= 1024px){
+            .column {
+                width: 25%;
+            }
+        }
+
+        @media screen and (width >= 1200px){
+            .column {
+                width: 6.666666%;
+                margin: auto;
+            }
+        } 
+    </style>
+</head>
+<body>
+    
+<div class="wrap">
+    <div class="column">
+        <div class="card"></div>
+    </div>
+    <div class="column">
+        <div class="card"></div>
+    </div>
+    <div class="column">
+        <div class="card"></div>
+    </div>
+    <div class="column">
+        <div class="card"></div>
+    </div>
+    <div class="column">
+        <div class="card"></div>
+    </div>
+    <div class="column">
+        <div class="card"></div>
+    </div>
+    <div class="column">
+        <div class="card"></div>
+    </div>
+    <div class="column">
+        <div class="card"></div>
+    </div>
+</div>
+
+</body>
+</html>
