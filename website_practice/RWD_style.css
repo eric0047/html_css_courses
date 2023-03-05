@@ -575,7 +575,8 @@ nav a:hover::before {
 }
 .learning-path-content .card {
     margin: auto;
-    width: 450px;
+    width: fit-content;
+    max-width: 500px;
     border: 1px solid #ddd;
     border-radius: 0.25em;
     box-sizing: border-box;
@@ -897,6 +898,6 @@ nav a:hover::before {
         max-width: 550px;
     }
     .learning-path-content .card {
-        max-width: 450px;
+        max-width: 500px;
     }
 }
