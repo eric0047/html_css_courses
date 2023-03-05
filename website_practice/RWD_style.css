@@ -1,0 +1,904 @@
+
+section {
+    padding: 30px 0;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    width: 100%;
+} 
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+   
+}
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+li {
+    list-style: none;
+}
+h2::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    display: block;
+    border-top: 2px solid #f55;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+h2::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    display: block;
+    border-top: 2px solid #f55;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+}
+.title p {
+    padding: 20px;
+}     
+.title {
+    margin: auto;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}  
+
+nav {
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: -100%;
+}
+
+.header nav  a {
+    display: block;
+    margin: 10px;
+}
+.header nav  a:nth-child(5) {
+    margin-left: 10px;
+}
+input {
+    display: none;
+}
+.menu_btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    position: absolute;
+    right: 5%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu_btn span {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #666;
+    position: relative;
+}
+.menu_btn span::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #666;
+    position: absolute;
+    top: -10px;
+}
+.menu_btn span::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #666;
+    position: absolute;
+    bottom: -10px;
+}
+#menu_control:checked ~ .header nav {
+    left: 0;
+}
+#menu_control:checked ~ .header .menu_btn span::before,
+#menu_control:checked ~ .header .menu_btn span::after {
+    display: none;
+}   
+/* nav a::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: #f55;
+    display: block;
+    left: 0;
+    top: 100%;
+    transform: scaleX(0%);
+}
+nav a:hover::before {
+    transform: scaleX(100%);
+    transition: .4s;
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    border-bottom: 1px  solid #eee;
+    font-weight: 400;
+    font-size: 20px;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 0 15px 0;
+    z-index: 3;
+}
+.header a:hover {
+    color: #f55;
+}
+.header .logo a img {
+    width: 30px;
+    border: none;
+}
+.logo a {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
+.header :last-child{
+    margin-left: auto;
+}
+.banner {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.subject-title {
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+}
+.subject-content .card {
+    width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+}
+.subject-content .card img {
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+
+
+.teacher::before {
+    position: absolute;
+    content: "";
+    background-color: #eeeeee66;
+    height: 150px;
+    top: -150px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    clip-path: polygon(30% 0%, 100% 100%, 0% 100%);
+}
+.teacher {
+    background-color: #eeeeee66;
+    position: relative;
+}
+.teacher .title h2::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: block;
+    border-top: 2px solid #f55;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+}
+.teacher .title h2::after {
+    display: none;
+}
+.teacher .title {
+    width: fit-content;
+    max-width: 900px;
+}
+.teacher .title h2 {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.teacher-title p {
+    text-align: left;
+    font-size: 18px;
+}
+.teacher-content span {
+    font-weight: bold;
+}
+.teacher-content .card-title-content span {
+    border-bottom: 2px solid #f00;
+}
+.teacher-content .card-title-content a {
+    opacity: .5;
+}
+.teacher-content .card-title-content a:hover {
+    opacity: 1;
+}
+.teacher-content .card {
+    padding: 20px;
+    min-width: 492px;
+    height: calc(100% - 20px);
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.teacher-content .card-title {
+    display: flex;
+    line-height: 2.5;
+    align-items: center;
+}
+.teacher-content .card-content {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    padding: 10px;
+    vertical-align: middle;
+}
+.teacher-content .card-content p {
+    padding: 5px;
+}
+.teacher-content .card-title .pic {
+    width: 180px;
+    margin: auto;
+    padding: 0 50px;
+}
+.teacher-content .card-title img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.teacher .teacher-content .card-title-content {
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+.card-title .col-md-12:nth-child(2)  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.teacher-content .card-title-content a img {
+    width: 30px;
+}
+.teacher-content .card-title li {
+    padding: 0 5px 0 0;
+}
+.teacher-content .card-content {
+    padding: 20px 0;
+}
+.teacher-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.teacher-content a {
+    color: #f55;
+}
+.teacher-content a:hover {
+    text-decoration: underline;
+}
+.teacher-content .card-footer {
+    padding-top: 10px;
+}
+.teacher-content .card-footer ul {
+    justify-content: flex-start;
+}
+.teacher-content .card-footer a {
+    display: inline-block;
+    border: 1px solid #f00;
+    border-radius: 0.25em;
+    margin: 10px 20px 0 0;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+
+}
+.teacher-content .card-footer a:hover {
+   background-color: #f55; 
+   color: #fff;
+   text-decoration: none;
+}
+.teacher-content .card-footer  p{
+    display: block;
+    width: fit-content;
+    margin-top: -20px;
+    padding-right: 5px;
+    background-color: #fff;
+}
+
+.news-title {
+    width: fit-content;
+}
+.news-content .card {
+    margin: 10px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+.news-content h3 {
+    font-size: 24px;
+}
+.news a:hover {
+    color: #f55;
+}
+.more-information {
+    width: 100px;
+    margin: auto;
+    padding: 20px 0;
+}
+.more-information a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px solid #f55;
+    background-color: #f55;
+    border-radius: 0.25em;
+    color: #fff;
+}
+.more-information a:hover {
+    background-color: #b00;
+    border: 1px solid #b00;
+    color: #fff;
+}
+
+.course {
+    background-color: #333;
+    color: #fff;
+    position: relative;
+}
+.course::before {
+    position: absolute;
+    content: "";
+    background-color: #333;
+    height: 100px;
+    top: -99px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    clip-path: polygon(30% 0%, 100% 100%, 0% 100%);
+}
+.course::after {
+    position: absolute;
+    content: "";
+    background-color: #333;
+    height: 100px;
+    bottom: -99px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%);
+}
+.course-title h2 {
+    text-align: left;
+}
+.course-title h2::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: block;
+    border-top: 2px solid #f55;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.course-title h2::after {
+    display: none;
+}
+.course a {
+    color: #666;
+}
+.course .more-information a {
+    color: #fff;
+}
+.course-title .col-12 {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.course-title .card {
+    margin: auto;
+}
+.course-title .col-12:nth-child(1) {
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+.course-title .col-12:nth-child(1) .card {
+    width: fit-content;
+    max-width: 374px;
+}
+.course-title .col-12:nth-child(2) .card {
+    width: fit-content;
+    max-width: 374px;
+    background-color: #c55;
+    margin: 100px 30px 100px 30px;
+    padding: 20px 0 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.course-title .col-12:nth-child(2) .card::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    background-color: #c55;
+    width: 394px;
+    bottom: 99.9%;
+    left: 0;
+    clip-path: polygon(70% 0%, 100% 100%, 0% 100%);
+}
+.course-title .col-12:nth-child(2) .card::after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    background-color: #c55;
+    width: 394px;
+    top: 99.9%;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 30% 100%);
+}
+.course-title .col-12:nth-child(2) .card span {
+   color: #fff;
+   position: relative;
+}
+.course-title .col-12:nth-child(2) .card span::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 7px;
+    transform: rotate(45deg);
+}
+.course-title .col-12:nth-child(2) .card span::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #c55;
+    position: absolute;
+    left: calc(100% + 3px);
+    top: 7px;
+    transform: rotate(45deg);
+}
+.course-title .col-12:nth-child(2) .card span:hover {
+    text-decoration: underline;
+}
+.course-title .col-12:nth-child(2) .card span:hover::before {
+    left: calc(100% + 8px);
+}
+.course-title .col-12:nth-child(2) .card span:hover::after {
+    left: calc(100% + 6px);
+}
+
+
+.course-content h3 {
+    background-color: none;
+    color: #fff;
+    width: fit-content;
+    margin-top: -2em;
+    margin-bottom: 0.5em;
+    padding-left: 0;
+    text-align: left;
+}
+
+.course-content .card {
+    max-width: 374px;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #666;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.course-content p {
+    border: 1px solid #666;
+    border-radius: 0.25rem;
+    font-size: 12px;
+    padding: 3px;
+    margin: 3px;
+}
+.course-content .card div {
+    padding: 5px 10px 5px;
+}
+.course-content div p {
+    display: inline-block;
+}
+.course-content .card-footer {
+    display: flex;
+    border-top: 1px solid #666;
+    font-size: 16px;
+    justify-content: space-between;
+    padding-bottom: 0;
+    align-items: flex-end;
+}
+.course-content .col-md-6:nth-child(1) .card-footer :last-child {
+    color: #f00;
+}
+.course-content .col-md-6:nth-child(2) .card-footer :last-child {
+    color: #77f;
+}
+.course-content .col-md-6:nth-child(3) .card-footer :last-child {
+    color: #0a0;
+}
+
+.learning-path {
+    margin-top: 100px;
+}
+.learning-path-title {
+    width: fit-content;
+    margin-right: auto;
+}
+.learning-path-title h2::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: block;
+    border-top: 2px solid #f55;
+    position: absolute;
+    top: 100%;
+    left: 5px;
+}
+.learning-path-title h2::after {
+    display: none;
+}
+
+.learning-path-title h2 {
+    text-align: left;
+    padding-left: 5px;
+}
+.learning-path-title p {
+    padding-left: 5px;
+}
+.learning-path-content .card {
+    margin: auto;
+    width: 502px;
+    border: 1px solid #ddd;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.learning-path-content .card-title.coding {
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    height: 200px;
+    position: relative;
+}
+.learning-path-content .card-title.camp{
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    height: 200px;
+    position: relative;
+}
+.learning-path-content .card-title h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #00000066;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.learning-path-content .card-content.coding {
+    padding: 15px;
+    position: relative;
+    top: 0px;
+    background-color: #fff;
+}
+.learning-path-content .card-content.camp {
+    padding: 15px;
+    position: relative;
+    top: 0px;
+    background-color: #fff;
+}
+.learning-path-content .card-content h3 {
+    border-bottom: 1px solid #666;
+    font-size: 20px;
+}
+.learning-path-content  p {
+    padding-top: 15px;
+}
+.learning-path-content .card-foot {
+    padding: 10px;
+    width: 80px;
+    position: relative;
+}
+.learning-path-content .card-foot p {
+    display: inline-block;
+    padding-right: 1px;
+    padding-top: 5px;
+    position: relative;
+    color: #f55;
+}
+.learning-path-content .card-foot svg {
+    position: absolute;
+    right: 0px;
+    bottom: 6px;
+    width: 30px;
+    height: 30px;
+    color: #f55;
+}
+.learning-path-content .card-foot a:hover p {
+    text-decoration: underline;
+}
+.learning-path-content .card-foot a:hover svg {
+    color: #f55;
+    text-decoration: none;
+    right: -5px;
+}
+
+.feedback {
+    margin-top: 50px;
+}
+.feedback-title {
+    margin-bottom: 20px;
+}
+.feedback .card {
+    width: 321.333333px;
+    box-sizing: border-box;
+    border: 1px solid #dddddddd;
+    border-radius: 0.25em;
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.feedback .card::before {
+    content: "，";
+    font-size: 80px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    bottom: 50px;
+    right: 25px;
+    color: #66666644;
+}
+
+.feedback .card::after {
+    content: "，";
+    font-size: 80px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    bottom: 50px;
+    right: 10px;
+    color: #66666644;
+}
+
+.feedback .card img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.feedback .card .name {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.feedback .card .name p {
+    padding-left: 10px;
+}
+.extend-article {
+    margin-top: 50px;
+}
+.extend-article img {
+    height: 240px
+}
+.extend-article-title {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.extend-article-content h3 {
+    font-size: 30px;
+}
+.extend-article-content .card  img {
+    border: 1px solid #fff;
+    border-radius: 0.25em;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.extend-article-content p {
+    color: #888;
+    padding-top: 5px;
+}
+.extend-article-content .card {
+    width: fit-content;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 20px;
+}
+.extend-article-content a:hover {
+    color: #f55;
+}
+
+
+.links::before {
+    background-color: #fff;
+    display: block;
+    content: "";
+    height: 150px;
+    margin: -31px;
+    margin-bottom: 30px;
+    border: 1px solid #fff;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 30%, 0% 100%);
+}
+.links {
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+}
+.links a {
+    text-decoration: none;
+    color: #fff;
+}
+.links a:hover {
+    color: #f55;
+}
+.links ul {
+    padding-top: 10px;
+}
+.links-head {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.links .links-logo {
+    margin-bottom: 20px;
+}
+.links-logo img {
+    width: 50%;
+    max-width: 274px;
+}
+.links-content .card {
+    width: 170px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.links-foot ul{
+    display: flex;
+    justify-content: center;
+}
+.links-foot li {
+    padding: 20px;
+    font-size: 22px;
+    text-align: baseline;
+}
+.links-foot svg {
+    width: 30px;
+    height: 30px;
+}
+.links-foot a {
+    opacity: .5;
+}
+.links-foot a:hover {
+    opacity: 1;
+    color: #ffffffee;
+}
+.footer {
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (width >= 768px){
+    .subject .row .col-md-6:nth-child(3) .card{
+        margin-left: calc(100% - 125px);
+    }
+    .teacher .card {
+        min-width: 492px;
+    }
+    .course-content .card {
+        max-width: 400px;
+    }
+}
+@media screen and (width >= 1024px){
+    .header {
+        width: 100%;
+    }
+    .menu_btn {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: 495px;
+        box-sizing: border-box;
+        padding-right: 30px;
+        justify-content: flex-end;
+        position: static;
+    }
+    nav :first-child{
+        padding-right: 10px;
+    }
+    .header nav  a{
+        vertical-align: middle;
+        padding: 0 3px 15px 3px;
+        height: 100%;
+        margin: 5px;
+        margin-bottom: -15px;
+        position: relative;
+        font-size: 18px;
+    }
+    .header nav  a:nth-child(5) {
+        margin-left: 0;
+    }
+    nav a::before {
+        content: "";
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background-color: #f55;
+        display: block;
+        left: 0;
+        top: 100%;
+        transform: scaleX(0%);
+    }
+    nav a:hover::before {
+        transform: scaleX(100%);
+        transition: .4s;
+    }
+    .subject-content .card {
+        margin: 50px;
+    }
+    .subject .row .col-md-6:nth-child(3) .card{
+        margin-left: 50px;
+    }
+    .teacher .teacher-content .card-title-content {
+        text-align: left;
+    }
+    .teacher-content ul {
+        justify-content: flex-start;
+    }
+    .course-content .card {
+        width: 336.333333px;
+    }
+}
+
+@media screen and (width >= 1200px){
+    .teacher .card {
+        max-width: 550px;
+    }
+    .learning-path-content .card {
+        max-width: 450px;
+    }
+}

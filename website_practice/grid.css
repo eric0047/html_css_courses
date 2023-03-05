@@ -94,8 +94,8 @@
             .col-xl-12 { width: 100%; }
         }
         .card {
-            height: 100px;
-            background-color: #f00;
+            /* height: 100px;
+            background-color: #f00; */
             margin-bottom: 20px;
         }
     
