@@ -242,7 +242,6 @@ nav a:hover::before {
 }
 .teacher-content .card {
     padding: 20px;
-    min-width: 492px;
     height: calc(100% - 20px);
     box-sizing: border-box;
     background-color: #fff;
@@ -370,6 +369,7 @@ nav a:hover::before {
     background-color: #333;
     color: #fff;
     position: relative;
+    width: 100%;
 }
 .course::before {
     position: absolute;
@@ -447,7 +447,7 @@ nav a:hover::before {
     position: absolute;
     height: 50px;
     background-color: #c55;
-    width: 394px;
+    width: 100%;
     bottom: 99.9%;
     left: 0;
     clip-path: polygon(70% 0%, 100% 100%, 0% 100%);
@@ -457,7 +457,7 @@ nav a:hover::before {
     position: absolute;
     height: 50px;
     background-color: #c55;
-    width: 394px;
+    width: 100%;
     top: 99.9%;
     left: 0;
     clip-path: polygon(0% 0%, 100% 0%, 30% 100%);
@@ -508,7 +508,7 @@ nav a:hover::before {
 }
 
 .course-content .card {
-    max-width: 374px;
+    max-width: 400px;
     box-sizing: border-box;
     border-radius: 0.25rem;
     background-color: #fff;
@@ -577,7 +577,7 @@ nav a:hover::before {
 }
 .learning-path-content .card {
     margin: auto;
-    width: 502px;
+    width: 450px;
     border: 1px solid #ddd;
     border-radius: 0.25em;
     box-sizing: border-box;
