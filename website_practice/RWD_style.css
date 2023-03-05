@@ -241,7 +241,8 @@ nav a:hover::before {
     opacity: 1;
 }
 .teacher-content .card {
-    padding: 20px;
+    margin: auto;
+    padding: 25px;
     height: calc(100% - 20px);
     box-sizing: border-box;
     background-color: #fff;
@@ -298,9 +299,6 @@ nav a:hover::before {
 }
 .teacher-content a:hover {
     text-decoration: underline;
-}
-.teacher-content .card-footer {
-    padding-top: 10px;
 }
 .teacher-content .card-footer ul {
     justify-content: flex-start;
