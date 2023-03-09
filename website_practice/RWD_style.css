@@ -446,7 +446,7 @@ nav a:hover::before {
     height: 50px;
     background-color: #c55;
     width: 100%;
-    bottom: 99.9%;
+    top: -49px;
     left: 0;
     clip-path: polygon(70% 0%, 100% 100%, 0% 100%);
 }
@@ -456,7 +456,7 @@ nav a:hover::before {
     height: 50px;
     background-color: #c55;
     width: 100%;
-    top: 99.9%;
+    bottom: -49px;
     left: 0;
     clip-path: polygon(0% 0%, 100% 0%, 30% 100%);
 }
