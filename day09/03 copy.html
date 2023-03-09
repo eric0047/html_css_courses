@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-header {
+            padding: 10px;
+            background-color: #999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .main-header .logo img {
+            vertical-align: top;
+        }
+        .main-nav a {
+               color: #fff;
+           }
+        #nav-switch {
+            display: none;
+        }
+        @media screen and (width < 1024px) and (orientation: portrait){
+            /* 螢幕呈現縱向時 */
+
+            .main-header .hb {
+                width: 40px;
+                height: 40px;
+                background-color: #f00;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+          }
+            .main-header .hb span {
+                width: 80%;
+                height: 2px;
+                background-color: #000;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+          }
+            .main-header .hb span:nth-child(1){
+                top: 11px;
+                transform: rotate(0deg);
+                transition: top 1s 1s, transform 1s;
+            }
+            #nav-switch:checked  + .main-header .hb span:nth-child(1){
+                /* position: absolute;
+                inset: 0; */
+                /* position的置中 */
+                /* margin: auto; */
+                top: 19px;
+                transform: rotate(45deg);
+                transition: top 1s, transform 1s 1s cubic-bezier(0,1.22,.14,1.53);
+            }
+            .main-header .hb span:nth-child(2){
+                top: 19px;
+                opacity: 1;  
+                transition: opacity 1s 2s; 
+            }
+            #nav-switch:checked  + .main-header .hb span:nth-child(2){
+                opacity: 0;
+                transition: opacity .4s;  
+            }
+            .main-header .hb span:nth-child(3){
+                top: 27px;
+                transform: rotate(0deg);
+                transition: top 1s 1s, transform 1s;
+            }
+            #nav-switch:checked  + .main-header .hb span:nth-child(3){
+                top: 19px;
+                transform: rotate(-45deg);
+                transition: top 1s, transform 1s 1s cubic-bezier(0,1.22,.14,1.53);
+            }
+            /* #nav-switch:checked  + .main-header .hb span:nth-child(3){
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                transform: rotate(45deg);
+            } */
+            /* #nav-switch:checked  + .main-header .hb span:nth-child(2){
+                display: none;
+            } */
+            /* #nav-switch:checked  + .main-header .hb span:nth-child(3){
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                transform: rotate(-45deg);
+            } */
+          .main-nav  {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 90%;
+            background-color: #fa0;
+            display: none;
+           }
+           .main-nav a {
+               display: block;
+               padding: 10px;
+               text-decoration: none;
+               color: #fff;
+               font-size: 18px;
+           }
+           .main-nav a + a {
+               border-top: 1px solid #fff;
+           }
+           #nav-switch:checked  + .main-header  .main-nav {
+            display: block;
+           }
+          }
+        @media screen and (width >= 1024px){
+            .main-nav a {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="nav-switch">
+    <!-- 寫在第一行可以控制全部的東西 -->
+    <header class="main-header">
+        <h1 class="logo">
+            <a href="#">
+                <img src="https://picsum.photos/80/45/?random=10">
+            </a>
+        </h1>
+
+        <label for="nav-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="main-nav">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+
+</body>
+</html>
